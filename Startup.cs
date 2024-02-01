@@ -45,7 +45,7 @@ namespace AuntieDot
             options.LogoutPath = "/Auth/Logout";
             options.LoginPath = "/Auth/Login";
             options.AccessDeniedPath = "/Auth/Login";
-            options.Cookie.SameSite = SameSiteMode.None;
+            // options.Cookie.SameSite = SameSiteMode.None;
             
             options.Validate();
         }
@@ -112,8 +112,8 @@ namespace AuntieDot
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddAuthentication(CookieSessionDefaults.AuthenticationScheme).AddCookieSession(ConfigureCookieAuthentication);
-            services.AddAuthentication(CookieSessionDefaults.AuthenticationScheme).AddCookie(CookieSessionDefaults.AuthenticationScheme, ConfigureCookieAuthentication);
+            services.AddAuthentication(CookieSessionDefaults.AuthenticationScheme).AddCookieSession(ConfigureCookieAuthentication);
+            // services.AddAuthentication(CookieSessionDefaults.AuthenticationScheme).AddCookie(CookieSessionDefaults.AuthenticationScheme, ConfigureCookieAuthentication);
             services.AddControllersWithViews();
             // Add the database context which injects the context into each controller's constructor
             services.AddDbContext<DataContext>(options => options.UseSqlServer(GetSqlConnectionString()));
