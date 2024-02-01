@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>
+        The Shopify Development Handbook
+    </h1>
+    <p class="lead">
+        This application was built as part of <a href="https://nozzlegear.com/shopify-development-handbook">The Shopify Development Handbook</a>, a premium course on building rock-solid Shopify apps with C# and ASP.NET.
+    </p>
+    <p>
+        <a href="https://nozzlegear.com/shopify-development-handbook" target="_blank" class="btn btn-primary btn-lg">
+            Learn more about the book &raquo;
+        </a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>
+            Grab your API and Secret keys.
+        </h3>
+        <p>
+            Before you can connect a Shopify store, you first need to get your app's API key and Secret key (under credential sets), then add them to this application using <code>dotnet user-secrets</code> CLI tool.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3>
+            Create a Shopify development store.
+        </h3>
+        <p>
+            You'll need a Shopify store to test and use this app. Shopify lets developers easily create development stores that can be used for testing new apps and integrations. <a href="https://app.shopify.com/services/partners/dev_shops/new">Fill out the form here</a> to set up a development store.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3>
+            Connect your Shopify store with the app.
+        </h3>
+        <p>
+            To test your app or integration, navigate to the login page at <a href="~/auth/login">/auth/login</a>. You'll be asked to enter your Shopify store's URL (it looks like *.myshopify.com) and then you'll be taken through the OAuth integration process.
+        </p>
+    </div>
+</div>
